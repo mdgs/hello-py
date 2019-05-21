@@ -4,8 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: harilab/hello-py:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
+      tag: hello-py:${CICD_EXECUTION_SEQUENCE}
       registry: index.docker.io
 - name: Deploy
   steps:
